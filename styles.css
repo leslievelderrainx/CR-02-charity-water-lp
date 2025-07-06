@@ -1,198 +1,166 @@
-/* charity: water Brand Colors & Fonts
+/* This CSS file styles the Charity: Water landing page */
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
-
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
-
-Fonts:
-- Proxima Nova
-- Avenir
-
-*/
-
-/* 
-  Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
-*/
-
-/* Set up the main font and background color for the whole page */
+/* Set up the basic look for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #222;
+  margin: 0; /* Removes default space around the page */
+  font-family: 'Proxima Nova', 'Avenir', sans-serif; /* Sets the font */
+  background-color: #fff7e1; /* Light yellow background */
+  color: #333; /* Dark gray text */
+  font-weight: normal; /* Normal font weight */
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+/* Styles for the header at the top */
+header {
+  background-color: #fff7e1; /* Same background as the page */
+  padding: 20px; /* Space inside the header (top, right, bottom, left) */
+  display: flex; /* Puts logo and button side by side */
+  justify-content: space-between; /* Logo on left, button on right */
+  align-items: center; /* Vertically centers items */
 }
 
-/* Hero Section Styles */
-.hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+/* Styles for the logo image */
+.logo img {
+  height: 38px; /* Sets the logo height */
+  display: block; /* Removes extra space below the image */
 }
 
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+/* Styles for the yellow call-to-action button in the header */
+.cta-button {
+  background: #ffc907; /* Yellow background */
+  border: none; /* No border */
+  padding: 14px 22px; /* Space inside the button */
+  font-size: 20px; /* Text size */
+  font-weight: normal; /* Normal text weight */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Shows pointer cursor on hover */
 }
 
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+/* Main section with orange background */
+.main-section {
+  background: #bf6c46; /* Orange background */
+  color: white; /* White text */
+  padding: 40px 32px; /* Space inside the section */
 }
 
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
+/* Container for content and image, keeps them side by side */
+.container {
+  max-width: 1200px; /* Maximum width of the content */
+  margin: 0 auto; /* Centers the container */
+  display: flex; /* Puts content and image side by side */
+  flex-wrap: wrap; /* Allows items to wrap on small screens */
+  align-items: center; /* Vertically centers items */
+  justify-content: center; /* Centers items horizontally */
+  gap: 40px; /* Space between content and image */
 }
 
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
+/* Styles for the text content area */
+.content {
+  flex: 1; /* Takes up equal space with image */
+  max-width: 500px; /* Maximum width for text */
 }
 
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
+/* Styles for the main heading */
+.content h1 {
+  font-size: 52px; /* Large text */
+  margin-bottom: 16px; /* Space below the heading */
+  font-weight: normal; /* Normal weight */
 }
 
-/* Style the impact story image */
-.impact-image {
+/* Styles for the paragraph under the heading */
+.content p {
+  font-size: 20px; /* Medium text */
+  margin-bottom: 24px; /* Space below the paragraph */
+  font-weight: normal; /* Normal weight */
+  line-height: 1.25; /* Space between lines */
+}
+
+/* Container for the call-to-action area below the text */
+.cta-container {
+  background-color: #fff7e1; /* Light yellow background */
+  padding: 16px 20px; /* Space inside the box */
+  border-radius: 16px; /* Rounded corners */
+  display: flex; /* Puts text and button side by side */
+  justify-content: space-between; /* Space between text and button */
+  align-items: center; /* Vertically centers items */
+  max-width: 420px; /* Maximum width */
+  margin-top: 24px; /* Space above the box */
+}
+
+/* Styles for the "Join the Mission" text */
+.cta-text {
+  font-size: 20px; /* Slightly larger text */
+  color: black; /* Black text */
+  font-weight: normal; /* Normal weight */
+}
+
+/* Styles for the yellow button inside the cta-container */
+.cta-container .primary {
+  background: #ffc907; /* Yellow background */
+  color: black; /* Black text */
+  padding: 12px 20px; /* Space inside the button */
+  border: none; /* No border */
+  border-radius: 10px; /* Rounded corners */
+  font-weight: normal; /* Normal weight */
+  font-size: 20px; /* Medium text */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styles for the image on the right */
+.image-container {
+  flex: 1; /* Takes up equal space with content */
+}
+
+/* Styles for the image itself */
+.image-container img {
+  width: 100%; /* Image fills the container */
+  max-width: 650px; /* Maximum width for the image */
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack content and image vertically */
+    text-align: center; /* Center text */
+  }
+
+  .cta-container {
+    flex-direction: column; /* Stack text and button vertically */
+    gap: 12px; /* Space between text and button */
+  }
+}
+
+/* Decorative triangle at the bottom of the main section */
+.main-section::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; /* Moves the triangle below the main section */
+  right: 0;
   width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  height: 200px;
+  background-color: #fff7e1; /* Light yellow color */
+  clip-path: polygon(100% 0, 100% 100%, 0 100%); /* Makes a triangle shape */
+  z-index: 0; /* Puts it behind the content */
 }
 
-/* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
+/* Makes sure the main section content is above the triangle */
+.main-section {
+  position: relative; /* Needed for z-index to work */
+  z-index: 1; /* Puts content above the triangle */
+  padding: 40px 32px 120px; /* Extra space at the bottom for the triangle */
 }
 
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+/* Changes button color when hovered over */
+.cta-button:hover,
+.cta-container .primary:hover {
+  background-color: #e6b100; /* Darker yellow on hover */
+  transition: background-color 0.3s ease; /* Smooth color change */
 }
 
-/* Add some spacing between sections */
-section {
-  margin-bottom: 20px;
-}
-
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
-
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
-  }
-
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
-  }
-
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
-  }
-}
-
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .impact-image {
-    width: 300px;
-  }
+/* Makes sure links that look like buttons don't have underlines */
+a.cta-button,
+a.primary {
+  text-decoration: none;  /* Removes underline from links */
+  color: black;           /* Makes link text black */
+  display: inline-block;  /* Makes padding and background apply properly */
 }
